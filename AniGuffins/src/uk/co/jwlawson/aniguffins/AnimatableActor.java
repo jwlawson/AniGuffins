@@ -11,6 +11,7 @@ public class AnimatableActor extends AnimatedActor {
 
 	public AnimatableActor(TextureRegion tex) {
 		super(tex);
+		mAnimations = new HashMap<String, Animation>();
 	}
 
 	public void addAnimation(String name, Animation ani) {

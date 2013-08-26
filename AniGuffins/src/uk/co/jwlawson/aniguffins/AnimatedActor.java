@@ -58,7 +58,7 @@ public class AnimatedActor extends DrawableActor {
 		if (running) {
 			elapsedTime += delta;
 			setTextureRegion(mAnimation.getKeyFrame(elapsedTime, looping));
-			if (mAnimation.isAnimationFinished(elapsedTime)) {
+			if (!looping && mAnimation.isAnimationFinished(elapsedTime)) {
 				animationDone();
 			}
 		}

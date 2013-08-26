@@ -5,8 +5,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 
-import java.util.UUID;
-
 public class DrawableActor extends Actor {
 
 	private TextureRegion mTextureRegion;
@@ -18,8 +16,7 @@ public class DrawableActor extends Actor {
 
 	/** Generate a random name, so that every actor has one to identify it */
 	private void generateName() {
-		UUID id = UUID.randomUUID();
-		setName(id.toString());
+		setName(String.valueOf(System.currentTimeMillis()));
 	}
 
 	public void setTextureRegion(TextureRegion tex) {

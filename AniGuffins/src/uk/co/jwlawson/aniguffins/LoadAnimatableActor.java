@@ -25,7 +25,7 @@ public class LoadAnimatableActor extends AnimatableActor {
 
 	private void loadAnimation(String animation, TextureAtlas atlas) {
 		TextureRegion reg = atlas.findRegion(id + "." + animation);
-		Animation ani = getAnimation(reg, 0.3f, tilesize);
+		Animation ani = getAnimation(reg, 0.2f, tilesize);
 		ani.setPlayMode(Animation.LOOP);
 		addAnimation(animation, ani);
 	}
